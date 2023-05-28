@@ -12,7 +12,7 @@ docker images
 查詢是否正確編譯
 
 
-## 1.容器內操作
+## 1.容器內操作(於容器中進行操作)
 ### 部屬docker容器
 ```
 docker run --gpus all -it <your_image_name>
@@ -32,7 +32,7 @@ cd /darknet
 ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
 ```
 
-## 2.容器外操作
+## 2.容器外操作(離開即移除該容器,下次會基於映像檔重新部屬新的)
 
 ### 於設備中 任意 clone yolo項目
 ```
@@ -51,7 +51,7 @@ ex. docker run --gpus all --rm -v $PWD:/workspace -w /workspace oliver_darknet d
 ```
 docker run --gpus all --rm -v $PWD:/workspace -w /workspace --privileged -v /dev/video0:/dev/video0 --env DISPLAY=unix$DISPLAY -v $XAUTH:/root/.Xauthority -v /tmp/.X11-unix:/tmp/.X11-unix oliver_darknet ./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights -c 0
 ```
-
+參數說明
 docker run --runtime=nvidia --rm -v $PWD:/workspace -w /workspace \
 --privileged \ 給予硬體權限
 -v /dev/video0:/dev/video0 \ 掛載攝像頭 會根據webcam編號改變
