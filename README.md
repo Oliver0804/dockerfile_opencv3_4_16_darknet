@@ -41,11 +41,13 @@ cd ./darknet
 wget https://pjreddie.com/media/files/yolov3.weights
 ```
 運行，此命令用運行完後即刻結束(--rm)
+
+![](https://github.com/Oliver0804/dockerfile_opencv3_4_16_darknet/blob/main/pic/%E6%88%AA%E5%9C%96%202023-05-28%20%E4%B8%8B%E5%8D%8810.42.25.png)
 ```
 docker run --gpus all --rm -v $PWD:/workspace -w /workspace <your_image_name> darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
 ```
 ex. docker run --gpus all --rm -v $PWD:/workspace -w /workspace oliver_darknet darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
-
+![](https://github.com/Oliver0804/dockerfile_opencv3_4_16_darknet/blob/main/pic/%E6%88%AA%E5%9C%96%202023-05-28%20%E4%B8%8B%E5%8D%8810.43.01.png)
 ## 待測試命令
 使用攝影機,運行yolov3
 ```
