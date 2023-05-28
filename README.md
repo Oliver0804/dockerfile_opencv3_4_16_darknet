@@ -1,4 +1,4 @@
-# dockerfile_opencv3_4_16_darknet（Yolo懶人包）
+# Dockerfile Opencv3.4.16 and darknet（Yolo懶人包）
 這個Dockerfile是用來建立一個深度學習開發環境的映像檔，該環境包含了NVIDIA CUDA、OpenCV，以及Darknet等關鍵元件，並且透過Docker的封裝特性，讓這個環境可以輕易地在不同的系統上進行部署和運行。
 
 - 基底映像檔：我們從具有CUDA 11.0.3支援的Ubuntu 20.04映像檔開始建立我們的環境。
