@@ -14,6 +14,13 @@
 - X11支援：為了能在Docker環境中顯示圖形介面，我們也進行了相關的設定。
 
 最後，我們設定了預設的命令為啟動bash，這樣當你啟動這個Docker映像檔的時候，就會直接進入bash命令列介面。
+
+## 使用簡介
+1. 使用本github提供的Dockerfile進行映像黨建置
+2. 進入容器中使用darknet
+3. 在宿主機上clone darknet後於該入路進行操作「容器外操作」
+2與3則一使用即可
+
 ## build image
 ```
 docker build -t <your_image_name> --no-cache .
@@ -63,6 +70,12 @@ docker run --gpus all --rm -v $PWD:/workspace -w /workspace <your_image_name> da
 ```
 ex. docker run --gpus all --rm -v $PWD:/workspace -w /workspace oliver_darknet darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
 ![](https://github.com/Oliver0804/dockerfile_opencv3_4_16_darknet/blob/main/pic/%E6%88%AA%E5%9C%96%202023-05-28%20%E4%B8%8B%E5%8D%8810.43.01.png)
+## TODO
+### 進行更完整的測試:
+1. 關於yolov3訓練與測試
+2. yolov4 yolov7 與更版本tiny的測試
+3. 整理個版本的weights方便使用..
+
 ## 待測試命令
 使用攝影機,運行yolov3
 ```
