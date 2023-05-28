@@ -76,6 +76,24 @@ ex. docker run --gpus all --rm -v $PWD:/workspace -w /workspace oliver_darknet d
 2. yolov4 yolov7 與更版本tiny的測試
 3. 整理個版本的weights方便使用..
 
+## Weights 僅整理，並沒有完整驗證
+| 模型名稱 | 權重文件路徑 |
+|---------|------------|
+| yolov4-csp-x-swish.weights | https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-csp-x-swish.weights |
+| yolov4-csp-swish.weights | https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-csp-swish.weights |
+| yolov4x-mish.weights | https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4x-mish.weights |
+| yolov4-csp.weights | https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-csp.weights |
+| yolov4.weights | https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_pre/yolov4.weights |
+| yolov4-tiny.weights | https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights |
+| enetb0-coco_final.weights | https://drive.google.com/open?id=1-AHO3tPi3tjyvtivOOZ3GDE2NtWSvKB_ |
+| yolov3-openimages.weights | https://pjreddie.com/media/files/yolov3-openimages.weights |
+| csresnext50-panet-spp-original-optimal_final.weights | https://drive.google.com/open?id=1MzTY44rLToO5APn8TZmfR7_ENSe5aZUn |
+| yolov3-spp.weights | https://pjreddie.com/media/files/yolov3-spp.weights |
+| csresnext50-panet-spp_final.weights | https://drive.google.com/open?id=1R5T6KrIh3h0w1BMS6If_GYDq6JrV9TPr |
+| yolov3.weights | https://pjreddie.com/media/files/yolov3.weights |
+| yolov3-tiny.weights | https://pjreddie.com/media/files/yolov3-tiny.weights |
+| yolov3-tiny-prn.weights | https://drive.google.com/open?id=1fcbR0b4iyzmA3C8MyvqLc6P7E4I8bhgD |
+
 ## 待測試命令
 使用攝影機,運行yolov3
 ```
