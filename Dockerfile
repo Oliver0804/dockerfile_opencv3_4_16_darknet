@@ -28,8 +28,8 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libtiff-dev \
     libavformat-dev \
-    libpq-dev 
-
+    libpq-dev \
+    libopencv-highgui-dev 
 
 
 # 安裝Python並設定Python環境
@@ -64,6 +64,11 @@ RUN git clone https://github.com/AlexeyAB/darknet.git \
     && sed -i 's/GPU=0/GPU=1/' Makefile \
     && make \
     && cp darknet /usr/bin
+
+
+RUN export DISPLAY=:1
+RUN apt-get update
+RUN apt-get install -qqy x11-apps
 
 # 設定預設命令
 CMD ["bash"]
