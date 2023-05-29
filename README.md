@@ -16,12 +16,12 @@
 最後，我們設定了預設的命令為啟動bash，這樣當你啟動這個Docker映像檔的時候，就會直接進入bash命令列介面。
 
 ## 使用簡介
-1. 使用本github提供的Dockerfile進行映像黨建置
+1. 使用本github提供的Dockerfile進行映像檔建置
 2. 進入容器中使用darknet
 3. 在宿主機上clone darknet後於該入路進行操作「容器外操作」
 2與3則一使用即可
 
-## build image
+## 1.build image
 ```
 docker build -t <your_image_name> --no-cache .
 ```
@@ -34,7 +34,7 @@ docker images
 查詢是否正確編譯
 
 
-## 1.容器內操作(於容器中進行操作)
+## 2.容器內操作(於容器中進行操作)
 ### 部屬docker容器
 ```
 docker run --gpus all -it <your_image_name>
@@ -54,7 +54,7 @@ cd /darknet
 ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
 ```
 
-## 2.容器外操作(離開即移除該容器,下次會基於映像檔重新部屬新的)
+## 3.容器外操作(離開即移除該容器,下次會基於映像檔重新部屬新的)
 
 ### 於設備中 任意 clone yolo項目
 ```
