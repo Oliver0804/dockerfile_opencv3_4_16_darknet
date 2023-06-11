@@ -1,0 +1,16 @@
+version: '3'
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8888:8888
+      - 6000:6000
+    volumes:
+      - ./notebooks:/app
+    devices:
+      - /dev/video0:/dev/video0
+    environment:
+      - DISPLAY=host.docker.internal:0
+    restart: always

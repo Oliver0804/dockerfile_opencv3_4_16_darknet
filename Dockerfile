@@ -29,7 +29,8 @@ RUN apt-get update && apt-get install -y \
     libtiff-dev \
     libavformat-dev \
     libpq-dev \
-    libopencv-highgui-dev 
+    libopencv-highgui-dev \
+    python3-pip 
 
 
 # 安裝Python並設定Python環境
@@ -62,29 +63,36 @@ RUN git clone https://github.com/AlexeyAB/darknet.git \
     && cd darknet \
     && sed -i 's/OPENCV=0/OPENCV=1/' Makefile \
     && sed -i 's/GPU=0/GPU=1/' Makefile \
-    && make \
+    #&& sed -i 's/CUDNN=0/CUDNN=1/' Makefile \
+    && make -j12\
     && cp darknet /usr/bin
 
 # 安裝 PyTorch
 RUN pip3 install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu113
 
+# install jupyter
+RUN pip3 install --upgrade pip
+RUN pip3 install jupyter
+RUN pip3 install jupyterlab
+
+
 # 下載 AlphaPose
-RUN git clone https://github.com/MVIG-SJTU/AlphaPose.git
+#RUN git clone https://github.com/MVIG-SJTU/AlphaPose.git
 
 # 設定環境變數並安裝相關套件
-RUN export PATH=/usr/local/cuda/bin/:$PATH && \
-    export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH && \
-    pip3 install cython && \
-    apt-get install -y libyaml-dev
+#RUN export PATH=/usr/local/cuda/bin/:$PATH && \
+#    export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH && \
+#    pip3 install cython && \
+#    apt-get install -y libyaml-dev
 
 # 安裝 AlphaPose
-WORKDIR /AlphaPose
-RUN python3 setup.py build develop --user
+#WORKDIR /AlphaPose
+#RUN python3 setup.py build develop --user
 
 # 安裝 PyTorch3D（選擇性，只有在需要視覺化時使用）
-RUN conda install -c fvcore -c iopath -c conda-forge fvcore iopath && \
-    conda install -c bottler nvidiacub && \
-    pip install git+https://github.com/facebookresearch/pytorch3d.git@stable
+#RUN conda install -c fvcore -c iopath -c conda-forge fvcore iopath && \
+#    conda install -c bottler nvidiacub && \
+#    pip install git+https://github.com/facebookresearch/pytorch3d.git@stable
 
 # 切換回工作目錄
 WORKDIR /
@@ -96,4 +104,5 @@ RUN apt-get update
 RUN apt-get install -qqy x11-apps
 
 # 設定預設命令
-CMD ["bash"]
+#CMD ["bash"]
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root"]
