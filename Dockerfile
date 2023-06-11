@@ -123,4 +123,5 @@ WORKDIR /
 
 
 # 設定預設命令
-CMD ["bash"]
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root"]
+
