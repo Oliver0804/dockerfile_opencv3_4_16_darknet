@@ -1,0 +1,133 @@
+  1  ls
+    2  cd ~
+    3  ls
+    4  cd cd ~
+    5  cd ..
+    6  cd ~
+    7  ls
+    8  pwd
+    9  ls
+   10  git clone https://github.com/MVIG-SJTU/AlphaPose.git
+   11  cd AlphaPose/
+   12  ls
+   13  pip list
+   14  export PATH=/usr/local/cuda/bin/:$PATH
+   15  export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
+   16  python3 setup.py build develop --user
+   17  locale-gen C.UTF-8
+   18  apt-get install locales
+   19  export LANG=C.UTF-8
+   20  python setup.py build develop
+   21  python3 setup.py build develop
+   22  python3 setup.py build develop --user
+   23  pip install numpy=1.19.5
+   24  pip install numpy==1.19.5
+   25  python3 setup.py build develop --user
+   26  pip install numpy==1.20
+   27  python3 setup.py build develop --user
+   28  ln -s /usr/bin/python3 /usr/bin/python
+   29  python3 setup.py build develop --user
+   30  history 
+   31  python scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth --indir examples/demo/
+   32  pip list
+   33  pip uninstall opencv-python
+   34  pip install opencv-python-headless
+   35  python scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth --indir examples/demo/
+   36  pip list
+   37  pip install numpy==1.20
+   38  python scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth --indir examples/demo/
+   39  apt remove python3-numpy
+   40  python scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth --indir examples/demo/
+   41  apt install python3-tk
+   42  python scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth --indir examples/demo/
+   43  ls
+   44  cd d
+   45  cd examples/
+   46  l;s
+   47  ls
+   48  cd demo/
+   49  ls
+   50  cd ..
+   51  ls
+   52  ./scripts/inference.sh configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml pretrained_models/fast_res50_256x192.pth ${VIDEO_NAME}
+   53  pip isntall youtube-dl
+   54  pip install youtube-dl
+   55  youtube-dl https://www.youtube.com/watch?v=ZK1sY3ac5sg
+   56  wget https://file-examples.com/wp-content/storage/2017/04/file_example_MP4_1280_10MG.mp4
+   57  ls
+   58  ./scripts/inference.sh configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml pretrained_models/fast_res50_256x192.pth file_example_MP4_1280_10MG.mp4 
+   59  wget https://file-examples.com/wp-content/storage/2017/04/file_example_MP4_480_1_5MG.mp4
+   60  ll
+   61  ls
+   62  ll -a
+   63  rm file_example_MP4_*
+   64  ls
+   65  wget https://download.samplelib.com/mp4/sample-5s.mp4
+   66  ll -a
+   67  ./scripts/inference.sh configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml pretrained_models/fast_res50_256x192.pth sample-5s.mp4 
+   68  cd detector/yolo/data
+   69  cd detector/yolo
+   70  mkdir data
+   71  cd data/
+   72  wget https://pjreddie.com/media/files/yolov3-spp.weights
+   73  cd ..
+   74  ls
+   75  ./scripts/inference.sh configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml pretrained_models/fast_res50_256x192.pth sample-5s.mp4 
+   76  cd pretrained_models/
+   77  ls
+   78  chmod +x get_models.sh 
+   79  ./get_models.sh 
+   80  cat get_models.sh 
+   81  wget https://drive.google.com/u/0/uc?id=1kQhnMRURFiy7NsdS8EFL-8vtqEXOgECn&export=download
+   82  wget "https://drive.google.com/u/0/uc?id=1kQhnMRURFiy7NsdS8EFL-8vtqEXOgECn&export=download" -o "fast_res50_256x192.pth"
+   83  ls
+   84  ll -a
+   85  wget "https://drive.google.com/u/0/uc?id=1kQhnMRURFiy7NsdS8EFL-8vtqEXOgECn&export=download" -o "fast_res50_256x192.pth"
+   86  ls
+   87  rm fast_res50_256x192.pth 
+   88  rm 'uc?id=1kQhnMRURFiy7NsdS8EFL-8vtqEXOgECn
+rm 'uc?id=1kQhnMRURFiy7NsdS8EFL-8vtqEXOgECn
+   89  ls
+   90  wget "https://drive.google.com/u/0/uc?id=1kQhnMRURFiy7NsdS8EFL-8vtqEXOgECn&export=download" -O "fast_res50_256x192.pth"
+   91  ls
+   92  ll -a
+   93  open .
+   94  ls
+   95  rm uc\?id\=1kQhnMRURFiy7NsdS8EFL-8vtqEXOgECn'
+'
+   96  ls
+   97  wget "https://drive.google.com/open?id=1kQhnMRURFiy7NsdS8EFL-8vtqEXOgECn&authuser=0" -O "fast_res50_256x192.pth"
+   98  ls
+   99  wget --no-check-certificate "https://drive.google.com/u/0/uc?id=1kQhnMRURFiy7NsdS8EFL-8vtqEXOgECn&export=download" -O "fast_res50_256x192.pth"
+  100  ls
+  101  wget --no-check-certificate 'https://drive.google.com/u/0/uc?id=1kQhnMRURFiy7NsdS8EFL-8vtqEXOgECn&export=download' -O 'fast_res50_256x192.pth'
+  102  pip install gdown
+  103  python
+  104  ls
+  105  ll
+  106  cd ..
+  107  ls
+  108  ./scripts/inference.sh configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml pretrained_models/fast_res50_256x192.pth sample-5s.mp4 
+  109  ls
+  110  pip list
+  111  apt-get install python3-opencv
+  112  ./scripts/inference.sh configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml pretrained_models/fast_res50_256x192.pth sample-5s.mp4 
+  113  pip list
+  114  pip install numpy==1.20
+  115  pip list
+  116  apt remove pytohn3-pip
+  117  apt remove pytohn3-numppy
+  118  apt remove pytohn3-numpy
+  119  apt remove pytohn-numpy
+  120  apt remove python-numpy
+  121  apt remove python3-numpy
+  122  ./scripts/inference.sh configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml pretrained_models/fast_res50_256x192.pth sample-5s.mp4 
+  123  ls
+  124  wget https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4
+  125  ./scripts/inference.sh configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml pretrained_models/fast_res50_256x192.pth sample_960x400_ocean_with_audio.mp4 
+  126  wget https://filesamples.com/samples/video/mpeg/sample_1280x720_surfing_with_audio.mpeg
+  127  ./scripts/inference.sh configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml pretrained_models/fast_res50_256x192.pth sample_1280x720_surfing_with_audio.mpeg 
+  128  wget https://www.learningcontainer.com/mp4-sample-video-files-download/#
+  129  wget https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_2mb.mp4
+  130  ./scripts/inference.sh configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml pretrained_models/fast_res50_256x192.pth big_buck_bunny_720p_2mb.mp4 
+  131  history 

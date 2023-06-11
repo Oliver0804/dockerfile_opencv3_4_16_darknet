@@ -1,0 +1,14 @@
+version: '3'
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-jupyter-image
+    ports:
+      - 8888:8888
+    volumes:
+      - ./notebooks:/app
+    devices:
+      - /dev/video0:/dev/video0
+    restart: always
