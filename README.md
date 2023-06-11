@@ -70,6 +70,12 @@ docker run --gpus all --rm -v $PWD:/workspace -w /workspace <your_image_name> da
 ```
 ex. docker run --gpus all --rm -v $PWD:/workspace -w /workspace oliver_darknet darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
 ![](https://github.com/Oliver0804/dockerfile_opencv3_4_16_darknet/blob/main/pic/%E6%88%AA%E5%9C%96%202023-05-28%20%E4%B8%8B%E5%8D%8810.43.01.png)
+
+
+### 使用Jupyter notebook進行
+```
+docker-compose up
+```
 ## TODO
 ### 進行更完整的測試:
 1. 關於yolov3訓練與測試
