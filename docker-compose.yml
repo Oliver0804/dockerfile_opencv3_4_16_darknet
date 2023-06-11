@@ -1,0 +1,15 @@
+version: '3'
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: darknet_jupyter
+    ports:
+      - 8888:8888
+      - 6000:6000
+    volumes:
+      - ./notebooks:/app
+    environment:
+      - DISPLAY=host.docker.internal:0
+    restart: always
