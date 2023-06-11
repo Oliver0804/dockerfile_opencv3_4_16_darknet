@@ -5,6 +5,8 @@ services:
       context: .
       dockerfile: Dockerfile
     image: darknet_jupyter
+    devices:
+      - /dev/video0:/dev/video0
     ports:
       - 8888:8888
       - 6000:6000
